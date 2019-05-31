@@ -8,9 +8,22 @@ print('Hi, %s.' % name)         # Writing output to STDOUT
 '''
 
 def solve (nArr, N, I, Q):
-	# write your code here, which processes the passed variables, accepts queries and produces result.
-	
-
+    for i in range(Q):
+        q=int(input())
+        t=0
+        t1=[]
+        if I>q:
+            print(-1)
+            break
+        for i in range(I-1,len(nArr)):
+            
+            t=t+(i+1)
+            if t>q:
+                break
+            else:
+                t1.append(t)
+        print(i)
+        
 T = int(input()) #Total Testcases
 while(T > 0):
 	temp = [int(x) for x in input().split()]

@@ -1,0 +1,29 @@
+def solve ( noOfQueriesP): #takes query input and processes them
+    # your code ()
+    a=[]
+    for i in range(noOfQueriesP):
+        
+        q,n = input().split()
+        n=int(n)
+        if q=='A':
+            a.append(n)
+        elif q=='I':
+            for i in range(len(a)):
+                a[i]=a[i]+n
+        elif q=='D':
+            for i in range(len(a)):
+                a[i]=a[i]-n
+        elif q=='P':
+            a.sort(reverse=True)
+            if n>len(a):
+                print(-1)
+            else:
+                print(a[n-1])
+    #print(a)
+   		 
+noOfTestCasesQ = int(input())
+
+while(noOfTestCasesQ > 0):
+    noOfQueriesP = int(input())
+    solve(noOfQueriesP)
+    noOfTestCasesQ = noOfTestCasesQ - 1

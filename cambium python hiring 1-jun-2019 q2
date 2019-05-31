@@ -1,0 +1,20 @@
+'''
+# Sample code to perform I/O:
+
+name = input()                  # Reading input from STDIN
+print('Hi, %s.' % name)         # Writing output to STDOUT
+
+# Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
+'''
+
+def solve (nArr, N, I, Q):
+	# write your code here, which processes the passed variables, accepts queries and produces result.
+	
+
+T = int(input()) #Total Testcases
+while(T > 0):
+	temp = [int(x) for x in input().split()]
+	N, I, Q = temp[0], temp[1], temp[2]
+	nArr = [int(x) for x in input().split()]
+	solve(nArr, N, I, Q)
+	T = T - 1
